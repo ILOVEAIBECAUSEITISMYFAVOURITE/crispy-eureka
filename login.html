@@ -1,0 +1,126 @@
+<html>
+ <head>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box}
+    * {background: thistle;}
+      
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: lavenderblush;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: lightsalmon;
+      outline: none;
+    }
+    
+    hr {
+      border: 1px solid lightcoral;
+      margin-bottom: 25px;
+    }
+    
+    /* Set a style for all buttons */
+    button {
+      background-color: mistyrose;
+      color: teal;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    button:hover {
+      opacity:1;
+    }
+    
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      padding: 14px 20px;
+      background-color: lavender;
+    }
+    
+    /* Float cancel and signup buttons and add an equal width */
+    .cancelbtn, .signupbtn {
+      float: left;
+      width: 100%;
+    }
+    
+    /* Add padding to container elements */
+    .container {
+      padding: 16px;
+    }
+    
+    /* Clear floats */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    /* Change styles for cancel button and signup button on extra small screens */
+    @media screen and (max-width: 300px) {
+      .cancelbtn, .signupbtn {
+         width: 100%;
+      }
+    }
+
+    .b1 {
+       
+       align-items: center;
+       width: 50%; 
+    }
+    </style>
+ </head> 
+<form action="index.html">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      
+      <button onclick="myFunction()">Sign Up</button>
+
+      <script>
+        function myFunction() {
+          location.replace("index.html")
+        }
+
+            // Get the value of the input field with id="numb"
+            let x = document.getElementById("username").value;
+            // If x is Not a username
+            let text;
+            if (isNaN(x) || x < 1 || x > 10){
+             {
+              text = "The form has not filled";
+            }
+             else {
+              text = "Form succesfully filled";
+            }
+            document.getElementById("demo").innerHTML = text;
+          }
+          </script>
+          
+    </div>
+  </div>
+</form>
+</html>
